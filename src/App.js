@@ -1,17 +1,14 @@
 import React from 'react';
 import Header from './comps/header';
-import SearchBar from './comps/searchBar';
-import MoviesList from './comps/moviesList';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
+import Search from './comps/searchList';
+
 
 
 function App(props) {
   return (
     <div>
       <Header />
-      <SearchBar />
-      {/* <MoviesList /> */}
+      <Search />
 
     </div>
   );
