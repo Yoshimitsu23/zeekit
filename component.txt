@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Warning extends Component {
-    render() {
-        return(
-            <div>
-        
-            </div>
-        )
-    }
+
+function example(props) {
+  return (
+    <div>
+
+    </div>
+  );
 }
 
-export default Warning;
+export default example;

@@ -1,11 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './comps/header';
+import SearchBar from './comps/searchBar';
+import MoviesList from './comps/moviesList';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
-function App() {
+
+function App(props) {
   return (
-    <div className="App">
-      reacr works
+    <div>
+      <Header />
+      <SearchBar />
+      {/* <MoviesList /> */}
+
     </div>
   );
 }
