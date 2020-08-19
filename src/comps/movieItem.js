@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { getApi } from '../Services/getApiServ';
 
 
 function MovieItem(props) {
+
+    let [ movie, setMovie ] = useState();
+    //let [ pop, setPop ] = useState(false);
+
+    let item = props.item;
+
     return (
-        <div className="card-deck">
-            <div className="card col-lg-4">
-                <img src={props.Poster} className="card-img-top" alt="..." />
-                <div className="card-body">
-                    <h5 className="card-title">{props.Title}</h5>
-                    <p className="card-text">{props.Year}</p>
-                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                </div>
+        <div className="col-lg-6 border mt-2">
+            <img src={item.Poster} className="w-25" />
+            <div className="card-body">
+                <h5 className="card-title">{item.Title}</h5>
+                <p className="card-text">{item.Year}</p>
+                <button onClick={() => { props.setClass('dark'); props.setId(item.imdbID) }}>info</button>
             </div>
         </div>
+
     );
 }
 
